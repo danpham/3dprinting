@@ -2,7 +2,7 @@
 G92 E0 ; Reset Extruder
 G28 ; Home all axes
 M104 S160; Put hotend on standby temperature, non blocking
-G29; Perform bed leveling
+M501; Load all saved settings from EEPROM
 M420 S1 ; Enable bed leveling
 M104 S{material_print_temperature} ; Set correct hotend temperature
 G1 X160 Y124 Z50 F5000.0 ; Center hotend to remove blobs
